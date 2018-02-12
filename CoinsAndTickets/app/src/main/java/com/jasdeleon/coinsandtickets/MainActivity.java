@@ -24,22 +24,26 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        /*Que billetes y monedas hay*/
         values = new int[]{500, 200, 100, 50, 20, 10, 5, 2, 1};
-
+        //arreglo con text views de cada moneda
         coins = new TextView[getTextViewIds().length];
-
+        //enlaza java con android
         for (int i = 0; i < coins.length; i++) {
             coins[i] = (TextView) findViewById(getTextViewIds()[i]);
             coins[i].setText("0");
         }
+        //edit text del dinero a separar
         num = (EditText) findViewById(R.id.amountEditText);
+        //boton para separar
         separateButton = (Button) findViewById(R.id.separateButton);
         separateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 try {
+                    //dame numero
                     double numToCalulate = Double.parseDouble(String.valueOf(num.getText()));
+                    //calcula el cambio desde el arreglo dado de cantidad de billetes y monedas
                     for (int i = 0; i < coins.length; i++) {
                         coins[i].setText(String.valueOf(calculateChange(numToCalulate)[i]));
                     }
@@ -52,8 +56,15 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * @param num el numero a separar
+     * @return el arreglo con el numero de billetes o monedas
+     * por ejemplo devuelve {4,3,0,0,0,0,0}
+     * para las denominaciones {500,200,100,50,20,10,5}
+     * donde 4 para 500, 3 para 200,0 para 100, etc.
+     */
     private double[] calculateChange(double num) {
-
+        //un arreglo con los resultados de cada billete y moneda
         double change[] = new double[coins.length];
 
         /*ENTREGA DE CAMBIO ALGORITHM
@@ -70,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
         }
         return change;
     }
-
+/*ID'S DEL XML PARA ENLAZAR A JAVA*/
     public int[] getTextViewIds() {
         return new int[]{
                 R.id.tv500,
