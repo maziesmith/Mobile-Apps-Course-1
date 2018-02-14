@@ -1,5 +1,6 @@
 package com.jasdeleon.activitycommunication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -27,7 +28,27 @@ public class ThirdActivity extends AppCompatActivity {
         data.setText("Datos:\n" +
                 "Nombre: "+ bundle.getString("name")+"\n" +
                 "Edad: " +bundle.getInt("age")+"\n" +
-                "Estatura: "+ bundle.getFloat("height"));
+                "Estatura: "+ bundle.getFloat("height")+" \n" +
+                "¿Aceptas las condiciones?");
+        refuse.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent();
+                i.putExtra("status","Registro rechazado");
+                setResult(RESULT_OK, i);
+                finish();
+            }
+        });
+
+        accept.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent();
+                i.putExtra("status","Registro aceptado");
+                setResult(RESULT_OK,i);
+                finish();
+            }
+        });
     }
 
 }

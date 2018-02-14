@@ -39,10 +39,22 @@ public class SecondActivity extends AppCompatActivity {
                 i.putExtra("name", name.getText().toString());
                 i.putExtra("age", Integer.parseInt(String.valueOf(age.getText())));
                 i.putExtra("height", Float.parseFloat(String.valueOf(height.getText())));
-                startActivity(i);
+                startActivityForResult(i, 0);
             }
         });
 
+
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == 0 && resultCode == RESULT_OK) {
+            Bundle extras = data.getExtras();
+            String status = "";
+            if (extras != null) {
+                status = extras.getString("status");
+                result.setText(status);
+            }
+        }
+    }
 }
