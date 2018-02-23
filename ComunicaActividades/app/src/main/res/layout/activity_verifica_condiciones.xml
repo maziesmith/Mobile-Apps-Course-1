@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="rayas.jorge.comunicaactividades.VerificaCondiciones">
+
+    <TextView
+        android:id="@+id/tvPregunta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hola - ¿Aceptas las condiciones?"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <Button
+        android:id="@+id/btnAceptar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickAceptar"
+        android:text="Aceptar" />
+
+    <Button
+        android:id="@+id/btnRechazar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickRechazar"
+        android:text="Rechazar" />
+</LinearLayout>

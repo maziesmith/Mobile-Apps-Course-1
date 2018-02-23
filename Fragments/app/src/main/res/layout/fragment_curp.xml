@@ -1,0 +1,206 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="110dp"
+    android:orientation="vertical"
+    tools:context="rayas.jorge.fragments.FragmentCURP">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/tvAPc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="Apellido Paterno"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/black" />
+
+    <EditText
+        android:id="@+id/txtAPc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:ems="10"
+        android:inputType="textCapCharacters" />
+
+    <TextView
+        android:id="@+id/tvAMc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="Apellido Materno"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/black" />
+
+    <EditText
+        android:id="@+id/txtAMc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:ems="10"
+        android:inputType="textCapCharacters" />
+
+    <TextView
+        android:id="@+id/tvNombrec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="Nombre"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/black" />
+
+    <EditText
+        android:id="@+id/txtNombrec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:ems="10"
+        android:inputType="textCapCharacters" />
+
+    <TextView
+        android:id="@+id/tvFNacc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="Fecha de nacimiento"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/black" />
+
+    <LinearLayout
+        android:id="@+id/fNacr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/spDiac"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1"
+            android:entries="@array/dias" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_weight="1"
+            android:text="/" />
+
+        <Spinner
+            android:id="@+id/spMesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="-1dp"
+            android:layout_weight="1"
+            android:entries="@array/mes" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_weight="1"
+            android:text="/" />
+
+        <Spinner
+            android:id="@+id/spYearc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="0dp"
+            android:layout_weight="1"
+            android:entries="@array/year" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvSexoc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="Sexo"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/black" />
+
+    <RadioGroup
+        android:id="@+id/rgSexoc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbHombrec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Hombre" />
+
+        <RadioButton
+            android:id="@+id/rbMujerc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Mujer" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvEstadoc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="Estado"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/black" />
+
+    <Spinner
+        android:id="@+id/spEdo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:entries="@array/estados" />
+
+    <Button
+        android:id="@+id/btnCalculaCURP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="Calcular CURP"
+        android:textAppearance="@style/TextAppearance.AppCompat" />
+
+    <TextView
+        android:id="@+id/tvCURP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="16dp"
+        android:text="CURP"
+        android:textAlignment="center" />
+
+</LinearLayout>

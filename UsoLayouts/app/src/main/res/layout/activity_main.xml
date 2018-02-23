@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="rayas.jorge.usolayouts.MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Uso Layouts"
+        android:id="@+id/tvTitulo"
+        android:layout_gravity="center_horizontal"
+        android:textAlignment="center" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Relative Layout"
+        android:id="@+id/btnRelativeLayout"
+        android:onClick="btnRelativeLayoutOnClick"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Linear Layout 1"
+        android:id="@+id/btnLinearLayout1"
+        android:layout_gravity="center_horizontal"
+        android:onClick="btnLinearLayout1OnClick"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Linear Layout 2"
+        android:id="@+id/btnLinearLayout2"
+        android:layout_gravity="center_horizontal"
+        android:onClick="btnLinearLayout2OnClick"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Table Layout"
+        android:id="@+id/btnTableLayout"
+        android:layout_gravity="center_horizontal"
+        android:onClick="btnTableLayoutOnClick"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Grid Layout"
+        android:id="@+id/btnGridLayout"
+        android:layout_gravity="center_horizontal"
+        android:onClick="btnGridLayoutOnClick"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Frame Layout"
+        android:id="@+id/btnFrameLayout"
+        android:layout_gravity="center_horizontal"
+        android:onClick="btnFrameLayoutOnClick"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ConstraintLayout" />
+
+</LinearLayout>

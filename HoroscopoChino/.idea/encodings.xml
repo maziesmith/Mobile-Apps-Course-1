@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/app/src/main/assets/Caballo.txt" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/assets/Dragon.txt" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/assets/Gallo.txt" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/assets/Gato.txt" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/assets/Jabali.txt" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/assets/Mono.txt" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/assets/Perro.txt" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/assets/Rata.txt" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/assets/Serpiente.txt" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/assets/Tigre.txt" charset="windows-1252" />
+  </component>
+</project>

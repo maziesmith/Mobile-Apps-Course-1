@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="rayas.jorge.controlesbasicos.MainActivity">
+
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rbtIngles"
+            android:id="@+id/rbtIngles"
+            android:onClick="onClickRbtIngles" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rbtFrances"
+            android:id="@+id/rbtFrances"
+            android:onClick="onClickRbtFrances" />
+    </RadioGroup>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="@string/btnComprobarIdioma"
+        android:id="@+id/btnComprobarIdioma"
+        android:layout_weight="1"
+        android:onClick="onClickBtnIdioma" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="@string/chkSamsumg"
+        android:id="@+id/chkSamsumg"
+        android:layout_weight="1" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="@string/chkSony"
+        android:id="@+id/chkSony"
+        android:layout_weight="1" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="@string/btnComprobarMarca"
+        android:id="@+id/btnComprobarMarca"
+        android:layout_weight="1"
+        android:onClick="onClickBtnMarca" />
+
+    <ToggleButton
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="@string/toggleButton1"
+        android:textOn="@string/tgbON"
+        android:textOff="@string/tgbOFF"
+        android:id="@+id/toggleButton1"
+        android:layout_weight="1"
+        android:onClick="onClickToogle" />
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/rtbBar"
+        android:max="5"
+        android:numStars="5"
+        android:rating="1"
+        android:stepSize="1"
+        android:layout_weight="1" />
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/btnLeeer"
+            android:id="@+id/btnLeer"
+            android:layout_weight="1"
+            android:onClick="onClickBtnLeer" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/btnMas"
+            android:id="@+id/btnMas"
+            android:layout_weight="1"
+            android:onClick="onClickBtnMas" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/btnMenos"
+            android:id="@+id/btnMenos"
+            android:layout_weight="1"
+            android:nestedScrollingEnabled="false"
+            android:onClick="onClickBtnMenos" />
+
+    </LinearLayout>
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/seekBar1"
+        android:max="50"
+        android:progress="1"
+        android:layout_weight="1" />
+
+</LinearLayout>

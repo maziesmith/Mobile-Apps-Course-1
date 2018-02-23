@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="rayas.jorge.inventario.MainActivity">
+
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Inventario de Productos"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="32dp" />
+
+    <Button
+        android:id="@+id/btnNuevo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="24dp"
+        android:text="Nuevo Producto"
+        android:onClick="btnNuevoOnClick"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitulo" />
+
+    <Button
+        android:id="@+id/btnLista"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="24dp"
+        android:text="Lista de Productos"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnNuevo"
+        app:layout_constraintHorizontal_bias="0.502" />
+
+    <Button
+        android:id="@+id/btnSalir"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="24dp"
+        android:text="Salir"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLista" />
+
+</android.support.constraint.ConstraintLayout>

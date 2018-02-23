@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jorgerayas.holamundoandroid.MainActivity">
+
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Aplicación Hola Mundo"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@android:color/holo_red_dark"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/txtNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTitulo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="56dp"
+        android:ems="10"
+        android:hint="Nombre"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/btnSaludar1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:onClick="btnSaludar1OnClick"
+        android:text="Saludo 1" />
+
+    <Button
+        android:id="@+id/btnSaludar2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/btnSaludar1"
+        android:layout_below="@+id/btnSaludar1"
+        android:layout_marginTop="78dp"
+        android:onClick="btnSaludar2OnClick"
+        android:text="Saludo 2" />
+
+</RelativeLayout>

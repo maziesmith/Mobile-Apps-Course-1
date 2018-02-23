@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Controles Básicos</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="rbtIngles">Inglés</string>
+    <string name="rbtFrances">Francés</string>
+    <string name="chkSamsumg">Samsumg</string>
+    <string name="chkSony">Sony</string>
+    <string name="btnComprobarIdioma">Comprobar Idioma</string>
+    <string name="btnComprobarMarca">Comprobar Marca</string>
+    <string name="toggleButton1">ToggleButton</string>
+    <string name="tgbON">Prendido</string>
+    <string name="tgbOFF">Apagado</string>
+    <string name="btnLeeer">Leer</string>
+    <string name="btnMas">+</string>
+    <string name="btnMenos">-</string>
+
+</resources>

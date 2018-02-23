@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="rayas.jorge.constraint.MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pastel" />
+
+    <TextView
+        android:id="@+id/tvAutor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="0dp"
+        android:fontFamily="cursive"
+        android:text="Autor"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvTitulo"
+        app:layout_constraintLeft_toLeftOf="@+id/tvTitulo" />
+
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="16dp"
+        android:fontFamily="cursive"
+        android:text="Producto"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.33" />
+
+    <TextView
+        android:id="@+id/tvDescripcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Descripción:"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTextoDescripcion"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis nunc at augue volutpat vulputate. Nulla rhoncus, libero vel faucibus luctus, neque urna sodales tortor, placerat iaculis purus lacus sed velit. Aenean lacinia, diam eget scelerisque aliquam, nisi est mattis neque, sit amet convallis enim orci tristique augue."
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvDescripcion"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/guideline2"
+        android:layout_marginRight="8dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintVertical_bias="0.454" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline2"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:id="@+id/tvIngredientes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ingredientes:"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline2"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvDescripcion" />
+
+    <TextView
+        android:id="@+id/tvTextIng"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis nunc at augue volutpat vulputate. Nulla rhoncus, libero vel faucibus luctus, neque urna sodales tortor, placerat iaculis purus lacus sed velit. Aenean lacinia, diam eget scelerisque aliquam, nisi est mattis neque, sit amet convallis enim orci tristique augue."
+        android:layout_marginTop="6dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvIngredientes"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline2"
+        android:layout_marginRight="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3" />
+
+    <TextView
+        android:id="@+id/tvReceta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Receta:"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline3"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/tvTextReceta"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis nunc at augue volutpat vulputate. Nulla rhoncus, libero vel faucibus luctus, neque urna sodales tortor, placerat iaculis purus lacus sed velit. Aenean lacinia, diam eget scelerisque aliquam, nisi est mattis neque, sit amet convallis enim orci tristique augue."
+        android:layout_marginRight="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvReceta"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline3"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.66" />
+
+</android.support.constraint.ConstraintLayout>
