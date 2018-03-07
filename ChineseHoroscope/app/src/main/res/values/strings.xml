@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Chinese Horoscope</string>
+    <string name="buey_title">Buey</string>
+    <string name="bueytxt">Buey.txt</string>
+</resources>
