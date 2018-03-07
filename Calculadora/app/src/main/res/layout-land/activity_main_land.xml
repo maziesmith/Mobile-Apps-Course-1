@@ -8,7 +8,7 @@
     tools:context="rayas.jorge.calculadora.MainActivity">
 
     <EditText
-        android:id="@+id/txtDisplay"
+        android:id="@+id/txtCalc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
@@ -34,25 +34,25 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/button7"
+                android:id="@+id/btnSeven"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="7" />
 
             <Button
-                android:id="@+id/button4"
+                android:id="@+id/btnFour"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="4" />
 
             <Button
-                android:id="@+id/button1"
+                android:id="@+id/btnOne"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="1" />
 
             <Button
-                android:id="@+id/button0"
+                android:id="@+id/btnZero"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="0" />
@@ -64,25 +64,25 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/button8"
+                android:id="@+id/btnEight"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="8" />
 
             <Button
-                android:id="@+id/button5"
+                android:id="@+id/btnFive"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="5" />
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/btnTwo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="2" />
 
             <Button
-                android:id="@+id/buttonP"
+                android:id="@+id/btnDecimal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="." />
@@ -94,25 +94,25 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/button9"
+                android:id="@+id/btnNine"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="9" />
 
             <Button
-                android:id="@+id/button6"
+                android:id="@+id/btnSix"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="6" />
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/btnThree"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="3" />
 
             <Button
-                android:id="@+id/buttonMm"
+                android:id="@+id/btnPM"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="+/-" />
@@ -124,13 +124,13 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/buttonC"
+                android:id="@+id/btnC"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="C" />
 
             <Button
-                android:id="@+id/buttonEq"
+                android:id="@+id/btnEquals"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="=" />
@@ -141,14 +141,14 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/buttonM"
+                    android:id="@+id/btnPlus"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="+" />
 
                 <Button
-                    android:id="@+id/buttonme"
+                    android:id="@+id/btnMinus"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -161,14 +161,14 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/buttonMul"
+                    android:id="@+id/btnMultiply"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="X" />
 
                 <Button
-                    android:id="@+id/buttonDiv"
+                    android:id="@+id/btnDivide"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -183,28 +183,28 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/buttonPot"
+                android:id="@+id/expEX"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="^"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             <Button
-                android:id="@+id/buttonLog"
+                android:id="@+id/btnLog"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Log"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             <Button
-                android:id="@+id/buttonSin"
+                android:id="@+id/btnSin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="sin"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             <Button
-                android:id="@+id/buttonTan"
+                android:id="@+id/btnTan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="tan"
@@ -217,28 +217,28 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/buttonRaiz"
+                android:id="@+id/btnSqrRoot"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="√"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             <Button
-                android:id="@+id/buttonLn"
+                android:id="@+id/btnLn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="ln"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             <Button
-                android:id="@+id/buttonCos"
+                android:id="@+id/btnCos"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="cos"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             <Button
-                android:id="@+id/buttonPi"
+                android:id="@+id/btnPi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="π"

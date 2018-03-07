@@ -1,1 +1,1 @@
-Hola, esto es un texto que viene de la carpeta assets
+Hola, este texto se encuentra en la carpeta Assets.

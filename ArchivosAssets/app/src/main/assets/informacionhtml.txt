@@ -1,5 +1,5 @@
-Hola, este es un texto que viene de la carpta Assests y está combinado con código HTML
+<p> Hola, esto es un texto que viene de la carpeta Assets y está combinado con código HTML</p>
 <strong>Este texto está en negritas</strong>
 <p>
-    <font color="red">Este es un texto en color rojo</font>
+<font color="red">Este es un texto en color rojo</font>
 </p>

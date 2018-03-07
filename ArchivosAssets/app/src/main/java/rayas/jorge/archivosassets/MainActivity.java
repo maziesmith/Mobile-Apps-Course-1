@@ -7,21 +7,27 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView tvInformacion;
+    private TextView tvInfoAssets;
+    private TextView tvInfoRaw;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        tvInformacion=(TextView)findViewById(R.id.tvInformacion);
-        /*
-        AssetHelper helper=new AssetHelper(this, "informacion.txt");
-        String texto=helper.loadData();
-        tvInformacion.setText(texto);
-        */
+        tvInfoAssets=(TextView)findViewById(R.id.tvInfoAssets);
+        tvInfoRaw=(TextView)findViewById(R.id.tvInfoRaw);
 
-        AssetHelper helper=new AssetHelper(this, "informacionhtml.txt");
-        String texto=helper.loadData();
-        tvInformacion.setText(Html.fromHtml(texto));
+       /* AssetHelper helper =  new AssetHelper(this,"informacion.txt");
+        String texto = helper.loadData();
+        tvInfoAssets.setText(texto);*/
+
+        AssetHelper helper =  new AssetHelper(this,"informacionhtml.txt");
+        String texto = helper.loadData();
+        tvInfoAssets.setText(Html.fromHtml(texto));
+
+        RawHelper helperRaw = new RawHelper(this);
+        texto = helperRaw.getStringFromRawFile();
+        tvInfoRaw.setText(texto);
     }
 }
