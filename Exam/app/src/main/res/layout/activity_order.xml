@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jasdeleon.exam.OrderActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:text="Capturar Orden"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Platillos"
+        android:layout_above="@+id/platillo1"
+        android:layout_toStartOf="@+id/platillo2" />
+
+    <Button
+        android:id="@+id/platillo1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Platillo 1\n$ 15.00"
+        android:layout_above="@+id/textView4"
+        android:layout_alignEnd="@+id/textView3"
+        android:layout_marginBottom="24dp" />
+
+    <Button
+        android:id="@+id/platillo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/platillo1"
+        android:layout_alignBottom="@+id/platillo1"
+        android:layout_centerHorizontal="true"
+        android:text="Platilo 2\n$ 30.00" />
+
+    <Button
+        android:id="@+id/platillo3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/platillo2"
+        android:layout_alignBottom="@+id/platillo2"
+        android:layout_marginStart="14dp"
+        android:layout_toEndOf="@+id/platillo2"
+        android:text="Platillo 3 \n$ 60.00" />
+
+    <Button
+        android:id="@+id/agua"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView4"
+        android:layout_centerVertical="true"
+        android:text="Agua\n$ 6.00" />
+
+    <Button
+        android:id="@+id/refresco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/agua"
+        android:layout_marginStart="32dp"
+        android:layout_toEndOf="@+id/agua"
+        android:text="REFRESCO\n$ 10.00" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bebidas"
+        android:layout_above="@+id/refresco"
+        android:layout_alignEnd="@+id/platillo1" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forma de pago"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/agua"
+        android:layout_alignStart="@+id/radioGroup" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioGroup"
+        android:layout_below="@+id/textView5"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp">
+
+        <RadioButton
+            android:id="@+id/transfer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/textView5"
+            android:layout_below="@+id/textView5"
+            android:layout_marginTop="26dp"
+            android:text="Transfer" />
+
+        <RadioButton
+            android:id="@+id/cash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/refresco"
+            android:layout_alignTop="@+id/transfer"
+            android:text="Efectivo" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Siguiente"
+        android:layout_marginBottom="11dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/platillo3" />
+
+    <EditText
+        android:id="@+id/mesa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView3"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="Mesa"
+        android:inputType="textPersonName" />
+</RelativeLayout>
