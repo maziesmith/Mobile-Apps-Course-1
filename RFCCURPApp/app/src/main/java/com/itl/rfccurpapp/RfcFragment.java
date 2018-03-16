@@ -1,5 +1,8 @@
 package com.itl.rfccurpapp;
 
+import android.app.DatePickerDialog;
+import android.app.Dialog;
+import android.app.DialogFragment;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
@@ -10,10 +13,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import java.util.Calendar;
 
 
 /**
@@ -26,6 +32,7 @@ public class RfcFragment extends Fragment {
 
     private String srfc;
     private Button btnrfc;
+    static Button btnDate;
     private EditText ap_pat, ap_mat, name;
     private Spinner sdia, smes, syear;
 
@@ -33,6 +40,25 @@ public class RfcFragment extends Fragment {
 
     public RfcFragment() {
         // Required empty public constructor
+    }
+
+    public static class DatePickerFragment extends DialogFragment
+            implements DatePickerDialog.OnDateSetListener {
+
+        @Override
+        public Dialog onCreateDialog(Bundle savedInstanceState) {
+            final Calendar c = Calendar.getInstance();
+            int year = c.get(Calendar.YEAR);
+            int month = c.get(Calendar.MONTH);
+            int day = c.get(Calendar.DAY_OF_MONTH);
+            DatePickerDialog dialog = new DatePickerDialog(getActivity(), this, year, month, day);
+            dialog.getDatePicker().setMaxDate(c.getTimeInMillis());
+            return  dialog;
+        }
+
+        public void onDateSet(DatePicker view, int year, int month, int day) {
+            btnDate.setText(day+"/"+(month+1)+"/"+year);
+        }
     }
 
 
@@ -44,10 +70,16 @@ public class RfcFragment extends Fragment {
         ap_pat = (EditText) vw.findViewById(R.id.edtApePat);
         ap_mat = (EditText) vw.findViewById(R.id.edtApeMat);
         name = (EditText) vw.findViewById(R.id.edtName);
-        sdia = (Spinner) vw.findViewById(R.id.spDia);
-        smes = (Spinner) vw.findViewById(R.id.spMes);
-        syear = (Spinner) vw.findViewById(R.id.spYear);
         btnrfc = (Button) vw.findViewById(R.id.btnObtRFC);
+
+        btnDate = (Button) vw.findViewById(R.id.btnDate1);
+        btnDate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DialogFragment newFragment = new DatePickerFragment();
+                newFragment.show(getActivity().getFragmentManager(), "datePicker");
+            }
+        });
 
         btnrfc.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -82,10 +114,12 @@ public class RfcFragment extends Fragment {
                 if(name.getText().toString().length()>=0){
                     srfc = srfc + name.getText().toString().charAt(0);
                 }
+                String[] date = btnDate.getText().toString().split("/");
 
-                srfc = srfc + syear.getSelectedItem().toString().substring(2);
-                srfc = srfc + smes.getSelectedItem().toString();
-                srfc = srfc + sdia.getSelectedItem().toString();
+
+                srfc = srfc + date[2].substring(2);
+                srfc = srfc + date[1];
+                srfc = srfc + date[0];
 
                 srfc = srfc + "ZZZ";
 

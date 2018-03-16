@@ -1,5 +1,8 @@
 package com.itl.rfccurpapp;
 
+import android.app.DatePickerDialog;
+import android.app.Dialog;
+import android.app.DialogFragment;
 import android.content.Context;
 import android.content.res.Resources;
 import android.net.Uri;
@@ -11,10 +14,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import java.util.Calendar;
 
 
 /**
@@ -29,11 +35,57 @@ public class CurpFragment extends Fragment {
     private EditText ap_pat, ap_mat, name;
     private Spinner sdia, smes, syear, sedos;
     private RadioButton man, wom;
+    private int day, month,year;
 
     private OnFragmentInteractionListener mListener;
+    private static Button btnDate;
 
     public CurpFragment() {
         // Required empty public constructor
+    }
+
+    public int getMonth() {
+        return month;
+    }
+
+    public void setMonth(int month) {
+        this.month = month;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    public int getDay() {
+        return day;
+    }
+
+    public void setDay(int day) {
+        this.day = day;
+    }
+
+    public static class DatePickerFragment extends DialogFragment
+            implements DatePickerDialog.OnDateSetListener {
+
+        @Override
+        public Dialog onCreateDialog(Bundle savedInstanceState) {
+            final Calendar c = Calendar.getInstance();
+            int year = c.get(Calendar.YEAR);
+            int month = c.get(Calendar.MONTH);
+            int day = c.get(Calendar.DAY_OF_MONTH);
+            DatePickerDialog dialog = new DatePickerDialog(getActivity(), this, year, month, day);
+            dialog.getDatePicker().setMaxDate(c.getTimeInMillis());
+            return  dialog;
+        }
+
+        public void onDateSet(DatePicker view, int year, int month, int day) {
+
+            btnDate.setText(day+"/"+(month+1)+"/"+year);
+        }
     }
 
 
@@ -45,13 +97,18 @@ public class CurpFragment extends Fragment {
         ap_pat = (EditText) vw.findViewById(R.id.edtApePatC);
         ap_mat = (EditText) vw.findViewById(R.id.edtApeMatC);
         name = (EditText) vw.findViewById(R.id.edtNameC);
-        sdia = (Spinner) vw.findViewById(R.id.spDiaC);
-        smes = (Spinner) vw.findViewById(R.id.spMesC);
-        syear = (Spinner) vw.findViewById(R.id.spYearC);
         sedos = (Spinner) vw.findViewById(R.id.spEdo);
         man = (RadioButton) vw.findViewById(R.id.rdbMan);
         wom = (RadioButton) vw.findViewById(R.id.rdbWom);
         btnCurp = (Button) vw.findViewById(R.id.btnObtCURP);
+        btnDate = (Button) vw.findViewById(R.id.btnDate);
+        btnDate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DialogFragment newFragment = new DatePickerFragment();
+                newFragment.show(getActivity().getFragmentManager(), "datePicker");
+            }
+        });
 
 
 
@@ -89,10 +146,10 @@ public class CurpFragment extends Fragment {
                 if(name.getText().toString().length()>=0){
                     scurp = scurp + name.getText().toString().charAt(0);
                 }
-
-                scurp = scurp + syear.getSelectedItem().toString().substring(2);
-                scurp = scurp + smes.getSelectedItem().toString();
-                scurp = scurp + sdia.getSelectedItem().toString();
+                String[] date = btnDate.getText().toString().split("/");
+                scurp = scurp + date[2].substring(2);//syear.getSelectedItem().toString().substring(2);
+                scurp = scurp + date[1];//smes.getSelectedItem().toString();
+                scurp = scurp + date[0];//sdia.getSelectedItem().toString();
 
                 if(man.isChecked())
                 {
@@ -162,9 +219,9 @@ public class CurpFragment extends Fragment {
                     }
                 }
 
-                if(syear.getSelectedItem().toString().substring(0,2).equals("19")){
+                if(date[2].substring(0,2).equals("19")){
                     scurp = scurp + '0';
-                } else if(syear.getSelectedItem().toString().substring(0,2).equals("20")){
+                } else if(date[2].substring(0,2).equals("20")){
                     scurp = scurp + 'A';
                 }
                 scurp = scurp + '2';
