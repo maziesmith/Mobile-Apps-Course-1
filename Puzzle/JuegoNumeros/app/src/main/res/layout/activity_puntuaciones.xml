@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.itl.juegonumeros.Puntuaciones">
+
+    <TextView
+        android:id="@+id/tvPuntuaciones"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Puntuaciones"
+        android:gravity="center"
+        android:layout_margin="10px"
+        android:textSize="10pt" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@android:id/empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No hay puntuaciones" />
+
+        <ListView
+            android:id="@android:id/list"
+            android:layout_width="wrap_content"
+            android:layout_height="416dp"
+            android:drawSelectorOnTop="false" />
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btnOtro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="btnOtroOnClick"
+        android:text="Nuevo Juego" />
+
+    <Button
+        android:id="@+id/btnRegresar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="btnRegresarOnClick"
+        android:text="Regresar" />
+
+</LinearLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/linearLayout1"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+android:orientation="vertical"
+android:padding="5dp"
+android:layout_margin="10dp">
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:text="Ingresa tu nombre"
+    android:id="@+id/textView2" />
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/scrollView" >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre:"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginTop="12dp"/>
+
+        <TextView
+            android:id="@+id/tvPuntuacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Puntuacion" />
+
+        <EditText
+            android:id="@+id/txtNombre"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Escribe tu nombre"></EditText>
+
+        <Button
+            android:id="@+id/btnGuardar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="BtnGuardaronClick"
+            android:text="Guardar" />
+    </LinearLayout>
+</ScrollView>
+
+</LinearLayout>
